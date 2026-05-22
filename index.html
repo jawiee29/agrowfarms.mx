@@ -2251,6 +2251,1877 @@ section#gallery.photo-feature-v4 .visual-card-side img {
 }
 
 </style>
+<style id="agrow-world-class-preview">
+/* World-class local preview redesign: Apple-inspired clarity, buyer trust, and no-crop media. */
+:root {
+  --apple-bg: #f5f5f7;
+  --apple-surface: #ffffff;
+  --apple-text: #1d1d1f;
+  --apple-muted: #6e6e73;
+  --apple-hairline: rgba(0, 0, 0, 0.08);
+  --apple-blue: #0071e3;
+  --apple-blue-dark: #005bb5;
+  --agrow-green: #1f4521;
+  --agrow-green-soft: #eef7ee;
+  --agrow-gold: #b8731f;
+  --radius-xl: 28px;
+  --radius-lg: 22px;
+  --shadow-soft: 0 28px 70px rgba(0, 0, 0, 0.08);
+  --shadow-card: 0 14px 38px rgba(0, 0, 0, 0.07);
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 18% 10%, rgba(0, 113, 227, 0.10), transparent 28%),
+    radial-gradient(circle at 84% 18%, rgba(31, 69, 33, 0.12), transparent 30%),
+    linear-gradient(180deg, #fbfbfd 0%, var(--apple-bg) 52%, #ffffff 100%) !important;
+  color: var(--apple-text) !important;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif !important;
+  letter-spacing: 0 !important;
+}
+
+body, p, a, button, input, textarea, select, h1, h2, h3, h4, h5, h6, span, li, div {
+  letter-spacing: 0 !important;
+}
+
+.aurora,
+.hero-fx,
+.hero-decoration {
+  display: none !important;
+}
+
+.container {
+  width: min(1180px, calc(100vw - 44px)) !important;
+}
+
+nav {
+  top: 12px !important;
+  width: min(1180px, calc(100vw - 24px)) !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  border-radius: 999px !important;
+  background: rgba(255, 255, 255, 0.86) !important;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08) !important;
+  -webkit-backdrop-filter: saturate(180%) blur(24px) !important;
+  backdrop-filter: saturate(180%) blur(24px) !important;
+}
+
+.nav-inner {
+  min-height: 58px !important;
+  padding: 0 12px !important;
+  gap: 14px !important;
+}
+
+.nav-brand {
+  display: inline-flex !important;
+  min-width: max-content !important;
+  border-radius: 999px !important;
+  background: transparent !important;
+  color: var(--apple-text) !important;
+}
+
+.nav-logo-img {
+  width: 50px !important;
+  height: 50px !important;
+  padding: 4px !important;
+  border: 1px solid rgba(31, 69, 33, 0.10) !important;
+  border-radius: 14px !important;
+  background: #ffffff !important;
+  object-fit: contain !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08) !important;
+}
+
+.brand-text {
+  display: block !important;
+  font-size: 16px !important;
+  color: var(--apple-text) !important;
+}
+
+.nav-links a {
+  color: rgba(29, 29, 31, 0.70) !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  padding: 10px 8px !important;
+  white-space: nowrap !important;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  color: var(--apple-text) !important;
+}
+
+.nav-cta,
+.btn-primary {
+  border: 0 !important;
+  border-radius: 999px !important;
+  background: var(--apple-blue) !important;
+  color: #fff !important;
+  box-shadow: 0 10px 26px rgba(0, 113, 227, 0.28) !important;
+}
+
+.nav-cta:hover,
+.btn-primary:hover {
+  background: var(--apple-blue-dark) !important;
+}
+
+.lang-toggle:not(.mobile-lang-dock) {
+  border-color: var(--apple-hairline) !important;
+  background: rgba(245, 245, 247, 0.92) !important;
+}
+
+.lang-toggle button {
+  border-radius: 999px !important;
+  color: var(--apple-muted) !important;
+}
+
+.lang-toggle button.active {
+  color: #fff !important;
+  background: var(--apple-text) !important;
+}
+
+.hero {
+  min-height: auto !important;
+  padding: 138px 0 86px !important;
+  background: transparent !important;
+}
+
+.hero-bg-photo,
+.hero-overlay {
+  display: none !important;
+}
+
+.hero-grid {
+  width: min(1220px, calc(100vw - 44px)) !important;
+  max-width: 1220px !important;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr) !important;
+  gap: clamp(34px, 5vw, 76px) !important;
+  align-items: center !important;
+  padding: 0 !important;
+}
+
+.hero-content {
+  max-width: 610px !important;
+  padding: 0 !important;
+  color: var(--apple-text) !important;
+}
+
+.hero-subtitle,
+.eyebrow,
+.visual-kicker {
+  color: var(--agrow-green) !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+}
+
+.hero-subtitle::before {
+  background: var(--apple-blue) !important;
+}
+
+.hero h1 {
+  max-width: 12ch !important;
+  margin: 0 0 14px !important;
+  color: var(--apple-text) !important;
+  font-size: clamp(58px, 8vw, 108px) !important;
+  font-weight: 800 !important;
+  line-height: 0.94 !important;
+  letter-spacing: -0.015em !important;
+}
+
+.hero-tagline {
+  max-width: 14ch !important;
+  margin: 0 0 18px !important;
+  color: #1f4521 !important;
+  font-size: clamp(28px, 4vw, 54px) !important;
+  font-weight: 760 !important;
+  line-height: 1.03 !important;
+}
+
+.hero-desc {
+  max-width: 600px !important;
+  color: #515154 !important;
+  font-size: clamp(17px, 1.55vw, 22px) !important;
+  line-height: 1.46 !important;
+}
+
+.hero-ctas {
+  gap: 12px !important;
+  margin-top: 28px !important;
+}
+
+.btn-primary,
+.btn-outline {
+  min-height: 46px !important;
+  padding: 0 22px !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+}
+
+.btn-outline {
+  border: 1px solid rgba(0, 0, 0, 0.10) !important;
+  border-radius: 999px !important;
+  background: rgba(255, 255, 255, 0.78) !important;
+  color: var(--apple-text) !important;
+  box-shadow: none !important;
+}
+
+.hero-proof-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.hero-proof-item {
+  min-width: 0;
+  padding: 13px 14px;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+}
+
+.hero-proof-item strong,
+.hero-proof-item span {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.hero-proof-item strong {
+  color: var(--apple-text);
+  font-size: 13px;
+  font-weight: 760;
+}
+
+.hero-proof-item span {
+  margin-top: 4px;
+  color: var(--apple-muted);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.hero-map-wrap {
+  position: relative !important;
+  width: 100% !important;
+  max-width: none !important;
+  padding: clamp(16px, 2vw, 24px) !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  border-radius: var(--radius-xl) !important;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(245, 245, 247, 0.90)),
+    radial-gradient(circle at 50% 30%, rgba(0, 113, 227, 0.08), transparent 46%) !important;
+  box-shadow: var(--shadow-soft) !important;
+  overflow: hidden !important;
+}
+
+.hero-map-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, transparent 0 28%, rgba(255, 255, 255, 0.58) 48%, transparent 68%),
+    radial-gradient(circle at 18% 22%, rgba(31, 69, 33, 0.10), transparent 32%);
+  transform: translateX(-60%);
+  animation: mapSheen 18s ease-in-out infinite;
+}
+
+@keyframes mapSheen {
+  0%, 24% { transform: translateX(-74%); opacity: 0; }
+  38%, 62% { opacity: 0.68; }
+  100% { transform: translateX(78%); opacity: 0; }
+}
+
+.hero-map-wrap svg {
+  position: relative !important;
+  z-index: 1 !important;
+  width: 100% !important;
+  height: auto !important;
+  filter: drop-shadow(0 18px 40px rgba(31, 69, 33, 0.10)) !important;
+}
+
+.hero-map-wrap .arc,
+.hero-map-wrap .dist-line {
+  animation-duration: 18s !important;
+}
+
+.hero-map-wrap .pulse-ring {
+  animation-duration: 8.5s !important;
+}
+
+.hero-map-wrap .zone-bg-prod,
+.hero-map-wrap .zone-bg-prod-outer {
+  animation-duration: 14s !important;
+}
+
+.map-intelligence {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.map-intelligence-card {
+  min-width: 0;
+  padding: 13px 14px;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+}
+
+.map-intelligence-card strong,
+.map-intelligence-card span {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.map-intelligence-card strong {
+  color: var(--apple-text);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.map-intelligence-card span {
+  margin-top: 4px;
+  color: var(--apple-muted);
+  font-size: 11.5px;
+  line-height: 1.35;
+}
+
+.section {
+  padding: clamp(72px, 9vw, 118px) 0 !important;
+}
+
+.section-alt {
+  background: rgba(255, 255, 255, 0.58) !important;
+}
+
+.section-header {
+  max-width: 840px !important;
+  margin-bottom: 44px !important;
+}
+
+section.section .section-header h2,
+section#gallery.photo-feature-v4 .section-header h2 {
+  color: var(--apple-text) !important;
+  font-size: clamp(38px, 4.6vw, 68px) !important;
+  font-weight: 800 !important;
+  line-height: 1.06 !important;
+  letter-spacing: -0.01em !important;
+}
+
+.section-header p {
+  color: var(--apple-muted) !important;
+  font-size: clamp(16px, 1.5vw, 21px) !important;
+  line-height: 1.55 !important;
+}
+
+.values-grid,
+.products-grid,
+.certs-grid,
+.contact-grid {
+  gap: 18px !important;
+}
+
+.value-card,
+.product-card,
+.cert-card,
+.contact-card,
+.visual-card,
+.operation-card,
+.supporting-card,
+.agrow-photo-section-note {
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  border-radius: var(--radius-lg) !important;
+  background: rgba(255, 255, 255, 0.90) !important;
+  box-shadow: var(--shadow-card) !important;
+}
+
+.value-card,
+.product-card,
+.cert-card,
+.contact-card {
+  transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease !important;
+}
+
+.value-card:hover,
+.product-card:hover,
+.cert-card:hover,
+.contact-card:hover {
+  transform: translateY(-4px) !important;
+  border-color: rgba(0, 113, 227, 0.18) !important;
+  box-shadow: 0 20px 54px rgba(0, 0, 0, 0.10) !important;
+}
+
+.product-card {
+  overflow: hidden !important;
+}
+
+.product-photo {
+  display: none !important;
+}
+
+.product-card-inner {
+  padding: 24px !important;
+}
+
+.product-icon {
+  width: 58px !important;
+  height: 58px !important;
+  border: 1px solid rgba(0, 0, 0, 0.07) !important;
+  border-radius: 18px !important;
+  background: linear-gradient(180deg, #ffffff, #f5f5f7) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.78), 0 10px 26px rgba(0, 0, 0, 0.06) !important;
+}
+
+.product-header {
+  gap: 8px !important;
+}
+
+.product-name,
+.value-name,
+.cert-title,
+.contact-card h3,
+.visual-copy h3,
+.operation-card h4,
+.agrow-photo-section-note h3 {
+  color: var(--apple-text) !important;
+  overflow-wrap: anywhere !important;
+}
+
+.product-desc,
+.value-line,
+.cert-card p,
+.contact-card p,
+.visual-copy p,
+.operation-card p,
+.agrow-photo-section-note p {
+  color: var(--apple-muted) !important;
+  line-height: 1.54 !important;
+  overflow-wrap: anywhere !important;
+}
+
+.badge,
+.tag {
+  border-color: rgba(0, 0, 0, 0.07) !important;
+  border-radius: 999px !important;
+  background: #f5f5f7 !important;
+  color: #424245 !important;
+}
+
+section#gallery.photo-feature-v4 {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.62), rgba(245, 245, 247, 0.88)) !important;
+}
+
+section#gallery.photo-feature-v4 > .container,
+section#gallery.photo-feature-v4 .agrow-original-visuals {
+  max-width: min(1260px, calc(100vw - 44px)) !important;
+}
+
+section#gallery img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
+section#gallery.photo-feature-v4 .visual-card img,
+section#gallery.photo-feature-v4 .visual-card-large img,
+section#gallery.photo-feature-v4 .visual-card-side img,
+section#gallery.photo-feature-v4 .operation-card img,
+section#gallery.photo-feature-v4 .operation-card-wide img,
+section#gallery.photo-feature-v4 .supporting-card img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
+section#gallery figure,
+section#gallery .visual-card figure,
+section#gallery .operation-card figure,
+section#gallery .supporting-card figure,
+section#gallery .visual-card-large figure,
+section#gallery .visual-card-side figure,
+section#gallery .operation-card-wide figure {
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  aspect-ratio: auto !important;
+  border-radius: 22px !important;
+  background: #f5f5f7 !important;
+  overflow: hidden !important;
+}
+
+section#gallery.photo-feature-v4 .visual-card-large .visual-added-photo {
+  margin-top: 18px !important;
+}
+
+section#gallery.photo-feature-v4 .agrow-operation-grid,
+section#gallery.photo-feature-v4 .agrow-supporting-originals {
+  gap: 18px !important;
+}
+
+.stats-bar {
+  background: var(--apple-text) !important;
+  color: #fff !important;
+}
+
+.stat-item {
+  border-radius: 22px !important;
+  background: rgba(255, 255, 255, 0.07) !important;
+}
+
+#contact .contact-card[href],
+#contact .contact-card {
+  text-decoration: none !important;
+}
+
+.mobile-lang-dock {
+  display: none;
+}
+
+@media (max-width: 1120px) {
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    max-width: min(840px, calc(100vw - 44px)) !important;
+  }
+
+  .hero-content {
+    max-width: 760px !important;
+  }
+
+  .hero h1,
+  .hero-tagline {
+    max-width: none !important;
+  }
+}
+
+@media (max-width: 940px) {
+  .nav-links,
+  .nav-cta,
+  nav .btn-primary {
+    display: none !important;
+  }
+
+  .nav-inner {
+    justify-content: space-between !important;
+  }
+}
+
+@media (max-width: 780px) {
+  body {
+    padding-bottom: 72px;
+  }
+
+  nav {
+    top: 8px !important;
+    width: calc(100vw - 16px) !important;
+  }
+
+  .nav-inner {
+    min-height: 54px !important;
+    padding: 0 8px !important;
+  }
+
+  .brand-text {
+    font-size: 14px !important;
+  }
+
+  .nav-logo-img {
+    width: 46px !important;
+    height: 46px !important;
+    padding: 4px !important;
+  }
+
+  .nav-cta {
+    display: none !important;
+  }
+
+  .lang-toggle:not(.mobile-lang-dock) {
+    display: none !important;
+  }
+
+  .mobile-lang-dock {
+    position: fixed;
+    right: 14px;
+    bottom: calc(14px + env(safe-area-inset-bottom));
+    z-index: 1100;
+    display: inline-flex !important;
+    gap: 4px;
+    padding: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.88);
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.18);
+    -webkit-backdrop-filter: saturate(180%) blur(24px);
+    backdrop-filter: saturate(180%) blur(24px);
+  }
+
+  .mobile-lang-dock button {
+    min-width: 44px;
+    min-height: 38px;
+    padding: 0 12px !important;
+    font-size: 12px !important;
+    font-weight: 800 !important;
+  }
+
+  .hero {
+    padding: 112px 0 58px !important;
+  }
+
+  .hero-grid,
+  .container {
+    width: calc(100vw - 30px) !important;
+    max-width: calc(100vw - 30px) !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(48px, 15vw, 72px) !important;
+  }
+
+  .hero-tagline {
+    font-size: clamp(28px, 9vw, 42px) !important;
+  }
+
+  .hero-desc {
+    font-size: 17px !important;
+  }
+
+  .hero-ctas {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .hero-ctas .btn-primary,
+  .hero-ctas .btn-outline {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .hero-proof-grid,
+  .map-intelligence {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hero-map-wrap {
+    padding: 12px !important;
+    border-radius: 24px !important;
+  }
+
+  .hero-map-wrap svg {
+    min-width: 520px !important;
+  }
+
+  .hero-map-scroll {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .hero-map-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .section {
+    padding: 70px 0 !important;
+  }
+
+  .section-header {
+    margin-bottom: 30px !important;
+  }
+
+  section.section .section-header h2,
+  section#gallery.photo-feature-v4 .section-header h2 {
+    font-size: clamp(32px, 8.6vw, 42px) !important;
+    line-height: 1.08 !important;
+  }
+
+  .products-grid,
+  .values-grid,
+  .certs-grid,
+  .contact-grid,
+  section#gallery.photo-feature-v4 .agrow-original-visuals,
+  section#gallery.photo-feature-v4 .agrow-operation-grid,
+  section#gallery.photo-feature-v4 .agrow-supporting-originals {
+    grid-template-columns: 1fr !important;
+  }
+
+  .product-card-inner {
+    padding: 20px !important;
+  }
+
+  .product-header,
+  .product-tags {
+    align-items: flex-start !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-grid,
+  .container {
+    width: calc(100vw - 24px) !important;
+    max-width: calc(100vw - 24px) !important;
+  }
+
+  .brand-text {
+    max-width: 132px !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+  }
+
+  .hero h1 {
+    font-size: 50px !important;
+  }
+
+  .hero-tagline {
+    font-size: 30px !important;
+  }
+
+  .map-intelligence-card,
+  .hero-proof-item {
+    padding: 12px !important;
+  }
+}
+
+/* Refresh pass: lighter feel, stronger phone sizing, uniform no-crop media frames. */
+body {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(245, 245, 247, 0.94) 48%, #ffffff 100%),
+    radial-gradient(circle at 18% 6%, rgba(0, 113, 227, 0.08), transparent 24%),
+    radial-gradient(circle at 82% 16%, rgba(52, 199, 89, 0.10), transparent 26%) !important;
+}
+
+.hero {
+  padding-bottom: 74px !important;
+}
+
+.hero-desc {
+  color: #424245 !important;
+}
+
+.hero-proof-item,
+.map-intelligence-card,
+.value-card,
+.product-card,
+.cert-card,
+.contact-card,
+.visual-card,
+.operation-card,
+.supporting-card,
+.agrow-photo-section-note {
+  background: rgba(255, 255, 255, 0.94) !important;
+}
+
+section#gallery figure,
+section#gallery .visual-card figure,
+section#gallery .operation-card figure,
+section#gallery .supporting-card figure,
+section#gallery .visual-card-large figure,
+section#gallery .visual-card-side figure,
+section#gallery .operation-card-wide figure,
+section#gallery.photo-feature-v4 .visual-card-large figure,
+section#gallery.photo-feature-v4 .visual-card-side figure,
+section#gallery.photo-feature-v4 .operation-card figure,
+section#gallery.photo-feature-v4 .operation-card-wide figure {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  aspect-ratio: 16 / 10 !important;
+  min-height: 0 !important;
+  height: auto !important;
+  padding: 10px !important;
+  border: 1px solid rgba(0, 0, 0, 0.07) !important;
+  background: linear-gradient(180deg, #ffffff, #f5f5f7) !important;
+}
+
+section#gallery img,
+section#gallery.photo-feature-v4 .visual-card img,
+section#gallery.photo-feature-v4 .visual-card-large img,
+section#gallery.photo-feature-v4 .visual-card-side img,
+section#gallery.photo-feature-v4 .operation-card img,
+section#gallery.photo-feature-v4 .operation-card-wide img,
+section#gallery.photo-feature-v4 .supporting-card img {
+  width: 100% !important;
+  height: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
+section#gallery.photo-feature-v4 .agrow-supporting-originals .supporting-card {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  grid-template-columns: 1fr !important;
+  gap: 12px !important;
+}
+
+section#gallery.photo-feature-v4 .agrow-supporting-originals .supporting-card img {
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+  aspect-ratio: 16 / 10 !important;
+  height: auto !important;
+  padding: 10px !important;
+  border: 1px solid rgba(0, 0, 0, 0.07) !important;
+  border-radius: 22px !important;
+  background: linear-gradient(180deg, #ffffff, #f5f5f7) !important;
+}
+
+.certs-grid.compliance-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  align-items: stretch !important;
+}
+
+.compliance-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.compliance-panel {
+  padding: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: var(--shadow-card);
+}
+
+.compliance-panel h3 {
+  margin: 0 0 10px;
+  color: var(--apple-text);
+  font-size: 21px;
+  line-height: 1.14;
+}
+
+.compliance-panel p {
+  margin: 0;
+  color: var(--apple-muted);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.compliance-pillars {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.compliance-pillars span,
+.cert-status {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+  min-height: 34px;
+  padding: 7px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 999px;
+  background: #f5f5f7;
+  color: #424245;
+  font-size: 12px;
+  font-weight: 760;
+}
+
+.cert-card {
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 100% !important;
+}
+
+.cert-header {
+  min-height: 86px !important;
+}
+
+.cert-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cert-status {
+  width: fit-content;
+  margin-top: auto;
+  color: var(--apple-blue);
+  background: #eef6ff;
+}
+
+#contact .contact-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+}
+
+.social-card {
+  align-items: stretch !important;
+}
+
+.social-links {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  width: 100%;
+}
+
+.social-chip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 8px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 999px;
+  background: #f5f5f7;
+  color: var(--apple-text);
+  font-size: 13px;
+  font-weight: 760;
+  text-decoration: none;
+}
+
+.social-chip:hover,
+.social-chip:focus-visible {
+  background: #eef6ff;
+  color: var(--apple-blue);
+}
+
+section#gallery.photo-feature-v4 .agrow-original-visuals,
+section#gallery.photo-feature-v4 .agrow-operation-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  align-items: stretch !important;
+}
+
+section#gallery.photo-feature-v4 .visual-side-stack {
+  display: contents !important;
+}
+
+section#gallery.photo-feature-v4 .visual-card-large,
+section#gallery.photo-feature-v4 .visual-card-side,
+section#gallery.photo-feature-v4 .operation-card,
+section#gallery.photo-feature-v4 .operation-card-wide,
+section#gallery.photo-feature-v4 .operation-card:nth-child(1),
+section#gallery.photo-feature-v4 .operation-card:nth-child(2),
+section#gallery.photo-feature-v4 .operation-card:nth-child(n+3) {
+  grid-column: auto !important;
+  grid-row: auto !important;
+}
+
+section#gallery.photo-feature-v4 .visual-card-large .visual-copy {
+  display: block !important;
+}
+
+section#gallery.photo-feature-v4 .visual-card-large .visual-added-photo {
+  width: calc(100% + 40px) !important;
+  margin: 18px -20px 0 !important;
+}
+
+section#gallery.photo-feature-v4 .agrow-supporting-originals {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 20px !important;
+  max-width: calc(((100% - 40px) / 3) * 2 + 20px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+section#gallery.photo-feature-v4 .supporting-card {
+  width: 100% !important;
+  min-width: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  grid-template-columns: 1fr !important;
+}
+
+section#gallery.photo-feature-v4 .supporting-card img {
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  height: auto !important;
+}
+
+@media (max-width: 940px) {
+  .certs-grid.compliance-grid,
+  .compliance-intro {
+    grid-template-columns: 1fr !important;
+  }
+
+  #contact .contact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  section#gallery.photo-feature-v4 .agrow-original-visuals,
+  section#gallery.photo-feature-v4 .agrow-operation-grid,
+  section#gallery.photo-feature-v4 .agrow-supporting-originals {
+    grid-template-columns: 1fr !important;
+  }
+
+  section#gallery.photo-feature-v4 .agrow-supporting-originals {
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 780px) {
+  body {
+    background: linear-gradient(180deg, #ffffff 0%, #f5f5f7 46%, #ffffff 100%) !important;
+  }
+
+  .hero {
+    padding: 96px 0 50px !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(42px, 12.8vw, 58px) !important;
+    line-height: 0.98 !important;
+  }
+
+  .hero-tagline {
+    font-size: clamp(25px, 7.6vw, 34px) !important;
+    line-height: 1.08 !important;
+  }
+
+  .hero-desc {
+    font-size: 16px !important;
+    line-height: 1.48 !important;
+  }
+
+  .hero-proof-grid {
+    gap: 8px !important;
+  }
+
+  section#gallery figure,
+  section#gallery .visual-card figure,
+  section#gallery .operation-card figure,
+  section#gallery .supporting-card figure,
+  section#gallery .visual-card-large figure,
+  section#gallery .visual-card-side figure,
+  section#gallery .operation-card-wide figure,
+  section#gallery.photo-feature-v4 .agrow-supporting-originals .supporting-card img {
+    padding: 8px !important;
+    border-radius: 18px !important;
+  }
+
+  section#gallery.photo-feature-v4 .agrow-supporting-originals .supporting-card img {
+    aspect-ratio: 16 / 10 !important;
+  }
+
+  .compliance-panel {
+    padding: 18px !important;
+    border-radius: 20px !important;
+  }
+
+  .compliance-pillars {
+    grid-template-columns: 1fr !important;
+  }
+
+  #contact .contact-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Professional reset after review: compact Apple-style buyer site. */
+:root {
+  --radius-xl: 18px;
+  --radius-lg: 12px;
+  --shadow-soft: 0 14px 34px rgba(0, 0, 0, 0.07);
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important;
+}
+
+body {
+  background: linear-gradient(180deg, #ffffff 0%, #f5f5f7 48%, #ffffff 100%) !important;
+  color: #1d1d1f !important;
+}
+
+.container {
+  width: min(1100px, calc(100vw - 40px)) !important;
+}
+
+nav {
+  top: 10px !important;
+  width: min(1100px, calc(100vw - 24px)) !important;
+  border: 1px solid #d2d2d7 !important;
+  border-radius: 18px !important;
+  background: rgba(255, 255, 255, 0.92) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08) !important;
+}
+
+.nav-inner {
+  min-height: 56px !important;
+  padding: 0 12px !important;
+  gap: 12px !important;
+}
+
+.nav-brand {
+  gap: 10px !important;
+  min-width: 0 !important;
+  color: #1d1d1f !important;
+}
+
+.nav-logo-img {
+  flex: 0 0 42px !important;
+  width: 42px !important;
+  height: 42px !important;
+  padding: 3px !important;
+  border: 1px solid rgba(31, 69, 33, 0.12) !important;
+  border-radius: 10px !important;
+  background: #ffffff !important;
+  object-fit: contain !important;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08) !important;
+}
+
+.brand-text {
+  max-width: 180px !important;
+  overflow: hidden !important;
+  color: #1d1d1f !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+.nav-links {
+  gap: 10px !important;
+}
+
+.nav-links a {
+  color: #424245 !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  padding: 8px 2px !important;
+}
+
+.nav-cta,
+.btn-primary,
+.btn-outline {
+  min-height: 42px !important;
+  border-radius: 8px !important;
+  padding: 0 18px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  box-shadow: none !important;
+}
+
+.btn-primary {
+  background: #0071e3 !important;
+}
+
+.btn-outline {
+  border: 1px solid #d2d2d7 !important;
+  background: #ffffff !important;
+}
+
+.lang-toggle:not(.mobile-lang-dock) {
+  padding: 3px !important;
+  border-color: #d2d2d7 !important;
+  background: #f5f5f7 !important;
+}
+
+.lang-toggle button {
+  min-width: 36px !important;
+  min-height: 30px !important;
+  border-radius: 8px !important;
+  font-size: 12px !important;
+}
+
+.hero {
+  min-height: auto !important;
+  padding: 104px 0 52px !important;
+  background: #ffffff !important;
+}
+
+.hero-grid {
+  width: min(1100px, calc(100vw - 40px)) !important;
+  max-width: 1100px !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr) !important;
+  gap: 32px !important;
+  align-items: center !important;
+}
+
+.hero-content {
+  max-width: 560px !important;
+}
+
+.hero-subtitle {
+  margin-bottom: 12px !important;
+  color: #1f4521 !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  letter-spacing: 0.06em !important;
+}
+
+.hero-subtitle::before {
+  width: 34px !important;
+  background: #0071e3 !important;
+}
+
+.hero h1 {
+  max-width: none !important;
+  margin-bottom: 8px !important;
+  color: #1d1d1f !important;
+  font-size: clamp(44px, 5vw, 70px) !important;
+  font-weight: 700 !important;
+  line-height: 1.02 !important;
+  letter-spacing: 0 !important;
+}
+
+.hero-tagline {
+  max-width: 620px !important;
+  margin-bottom: 14px !important;
+  color: #1f4521 !important;
+  font-size: clamp(24px, 2.9vw, 38px) !important;
+  font-weight: 700 !important;
+  line-height: 1.12 !important;
+}
+
+.hero-desc {
+  max-width: 620px !important;
+  color: #515154 !important;
+  font-size: 17px !important;
+  line-height: 1.56 !important;
+}
+
+.hero-ctas {
+  gap: 10px !important;
+  margin-top: 20px !important;
+}
+
+.hero-proof-grid {
+  gap: 10px !important;
+  margin-top: 18px !important;
+}
+
+.hero-proof-item,
+.map-intelligence-card,
+.value-card,
+.product-card,
+.cert-card,
+.contact-card,
+.visual-card,
+.operation-card,
+.supporting-card,
+.agrow-photo-section-note,
+.compliance-panel {
+  border: 1px solid #d2d2d7 !important;
+  border-radius: 12px !important;
+  background: #ffffff !important;
+  box-shadow: var(--shadow-card) !important;
+}
+
+.hero-proof-item {
+  min-height: 82px !important;
+  padding: 13px 14px !important;
+}
+
+.hero-proof-item strong {
+  font-size: 13px !important;
+}
+
+.hero-proof-item span,
+.map-intelligence-card span {
+  color: #6e6e73 !important;
+}
+
+.hero-map-wrap {
+  padding: 14px !important;
+  border: 1px solid #d2d2d7 !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+  box-shadow: var(--shadow-soft) !important;
+}
+
+.hero-map-wrap::before {
+  opacity: 0.30 !important;
+  animation-duration: 28s !important;
+}
+
+.hero-map-wrap svg {
+  filter: none !important;
+}
+
+.hero-map-wrap .arc,
+.hero-map-wrap .dist-line {
+  animation-duration: 28s !important;
+}
+
+.map-intelligence {
+  gap: 8px !important;
+  margin-top: 10px !important;
+}
+
+.map-intelligence-card {
+  padding: 11px 12px !important;
+}
+
+.section {
+  padding: 64px 0 !important;
+}
+
+.section-alt {
+  background: #f5f5f7 !important;
+}
+
+.section-header {
+  max-width: 780px !important;
+  margin-bottom: 28px !important;
+}
+
+section.section .section-header h2,
+section#gallery.photo-feature-v4 .section-header h2 {
+  max-width: 880px !important;
+  color: #1d1d1f !important;
+  font-size: clamp(30px, 3.8vw, 48px) !important;
+  font-weight: 700 !important;
+  line-height: 1.08 !important;
+  letter-spacing: 0 !important;
+}
+
+.section-header p {
+  max-width: 760px !important;
+  color: #6e6e73 !important;
+  font-size: 16px !important;
+  line-height: 1.58 !important;
+}
+
+.eyebrow,
+.visual-kicker {
+  color: #1f4521 !important;
+  font-size: 11px !important;
+  letter-spacing: 0.06em !important;
+}
+
+.values-grid,
+.products-grid,
+.certs-grid,
+.contact-grid,
+section#gallery.photo-feature-v4 .agrow-original-visuals,
+section#gallery.photo-feature-v4 .agrow-operation-grid,
+section#gallery.photo-feature-v4 .agrow-supporting-originals {
+  gap: 16px !important;
+}
+
+.value-card,
+.product-card,
+.cert-card,
+.contact-card {
+  padding: 20px !important;
+  transition: transform 150ms ease, box-shadow 150ms ease, border-color 150ms ease !important;
+}
+
+.value-card:hover,
+.product-card:hover,
+.cert-card:hover,
+.contact-card:hover {
+  transform: translateY(-1px) !important;
+  border-color: #c7dff7 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+}
+
+.product-card-inner {
+  padding: 0 !important;
+}
+
+.product-icon {
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 12px !important;
+}
+
+.product-name,
+.value-name,
+.cert-title,
+.contact-card h3,
+.visual-copy h3,
+.operation-card h4,
+.agrow-photo-section-note h3 {
+  color: #1d1d1f !important;
+  line-height: 1.2 !important;
+}
+
+.product-desc,
+.value-line,
+.cert-card p,
+.contact-card p,
+.visual-copy p,
+.operation-card p,
+.agrow-photo-section-note p {
+  color: #6e6e73 !important;
+  line-height: 1.55 !important;
+}
+
+.badge,
+.tag,
+.compliance-pillars span,
+.cert-status {
+  min-height: 28px !important;
+  border: 1px solid #d2d2d7 !important;
+  border-radius: 20px !important;
+  background: #f5f5f7 !important;
+  color: #424245 !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+}
+
+section#gallery.photo-feature-v4 {
+  background: #ffffff !important;
+}
+
+section#gallery.photo-feature-v4 > .container,
+section#gallery.photo-feature-v4 .agrow-original-visuals {
+  max-width: min(1100px, calc(100vw - 40px)) !important;
+}
+
+section#gallery.photo-feature-v4 .agrow-original-visuals,
+section#gallery.photo-feature-v4 .agrow-operation-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+
+section#gallery.photo-feature-v4 .visual-card-large,
+section#gallery.photo-feature-v4 .visual-card-side,
+section#gallery.photo-feature-v4 .operation-card,
+section#gallery.photo-feature-v4 .operation-card-wide,
+section#gallery.photo-feature-v4 .operation-card:nth-child(1),
+section#gallery.photo-feature-v4 .operation-card:nth-child(2),
+section#gallery.photo-feature-v4 .operation-card:nth-child(n+3) {
+  grid-column: auto !important;
+}
+
+section#gallery.photo-feature-v4 .visual-side-stack {
+  display: contents !important;
+}
+
+section#gallery figure,
+section#gallery .visual-card figure,
+section#gallery .operation-card figure,
+section#gallery .supporting-card figure,
+section#gallery .visual-card-large figure,
+section#gallery .visual-card-side figure,
+section#gallery .operation-card-wide figure,
+section#gallery.photo-feature-v4 .agrow-supporting-originals .supporting-card img {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  aspect-ratio: 16 / 10 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  padding: 8px !important;
+  border: 1px solid #d2d2d7 !important;
+  border-radius: 12px !important;
+  background: #f5f5f7 !important;
+  overflow: hidden !important;
+}
+
+section#gallery img,
+section#gallery.photo-feature-v4 .visual-card img,
+section#gallery.photo-feature-v4 .visual-card-large img,
+section#gallery.photo-feature-v4 .visual-card-side img,
+section#gallery.photo-feature-v4 .operation-card img,
+section#gallery.photo-feature-v4 .operation-card-wide img,
+section#gallery.photo-feature-v4 .supporting-card img {
+  width: 100% !important;
+  height: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+}
+
+section#gallery.photo-feature-v4 .visual-copy,
+section#gallery.photo-feature-v4 .operation-card > div {
+  padding: 16px !important;
+}
+
+section#gallery.photo-feature-v4 .visual-card-large .visual-added-photo {
+  width: 100% !important;
+  margin: 14px 0 0 !important;
+}
+
+section#gallery.photo-feature-v4 .agrow-supporting-originals {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  max-width: calc(((100% - 32px) / 3) * 2 + 16px) !important;
+}
+
+.stats-bar {
+  background: #1d1d1f !important;
+}
+
+.stat-item {
+  border-radius: 12px !important;
+}
+
+.compliance-intro {
+  grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr) !important;
+  gap: 16px !important;
+}
+
+.compliance-panel {
+  padding: 20px !important;
+}
+
+.compliance-panel h3 {
+  color: #1d1d1f !important;
+  font-size: 20px !important;
+  line-height: 1.18 !important;
+}
+
+.certs-grid.compliance-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+}
+
+.cert-card {
+  padding: 0 !important;
+}
+
+.cert-header {
+  min-height: 72px !important;
+  padding: 16px !important;
+}
+
+.cert-body {
+  padding: 16px !important;
+}
+
+.cert-desc {
+  font-size: 14px !important;
+}
+
+#contact .contact-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+}
+
+.contact-logo img {
+  max-width: 210px !important;
+  height: auto !important;
+}
+
+.social-chip {
+  min-height: 36px !important;
+  border-radius: 8px !important;
+}
+
+.mobile-lang-dock {
+  border-radius: 12px !important;
+}
+
+@media (max-width: 1120px) {
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    max-width: min(780px, calc(100vw - 40px)) !important;
+  }
+
+  .hero-content {
+    max-width: 720px !important;
+  }
+
+  .hero-map-wrap {
+    max-width: 720px !important;
+  }
+}
+
+@media (max-width: 940px) {
+  .certs-grid.compliance-grid,
+  .compliance-intro,
+  #contact .contact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 780px) {
+  body {
+    padding-bottom: 72px !important;
+  }
+
+  .container,
+  .hero-grid,
+  section#gallery.photo-feature-v4 > .container,
+  section#gallery.photo-feature-v4 .agrow-original-visuals {
+    width: calc(100vw - 28px) !important;
+    max-width: calc(100vw - 28px) !important;
+  }
+
+  nav {
+    top: 8px !important;
+    width: calc(100vw - 16px) !important;
+    border-radius: 16px !important;
+  }
+
+  .nav-inner {
+    min-height: 54px !important;
+    padding: 0 10px !important;
+    gap: 8px !important;
+  }
+
+  .nav-logo-img {
+    flex-basis: 38px !important;
+    width: 38px !important;
+    height: 38px !important;
+    padding: 3px !important;
+  }
+
+  .brand-text {
+    max-width: 150px !important;
+    font-size: 13px !important;
+  }
+
+  .hero {
+    padding: 86px 0 38px !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(34px, 10vw, 44px) !important;
+    line-height: 1.04 !important;
+  }
+
+  .hero-tagline {
+    font-size: clamp(22px, 6.4vw, 28px) !important;
+    line-height: 1.16 !important;
+  }
+
+  .hero-desc {
+    font-size: 15px !important;
+    line-height: 1.56 !important;
+  }
+
+  .hero-ctas {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    align-items: stretch !important;
+  }
+
+  .hero-ctas .btn-primary,
+  .hero-ctas .btn-outline {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .hero-proof-grid,
+  .map-intelligence,
+  .certs-grid.compliance-grid,
+  .compliance-intro,
+  .products-grid,
+  .values-grid,
+  #contact .contact-grid,
+  section#gallery.photo-feature-v4 .agrow-original-visuals,
+  section#gallery.photo-feature-v4 .agrow-operation-grid,
+  section#gallery.photo-feature-v4 .agrow-supporting-originals {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hero-map-wrap {
+    max-width: 100% !important;
+    padding: 10px !important;
+  }
+
+  .hero-map-wrap svg {
+    min-width: 520px !important;
+  }
+
+  .hero-map-scroll {
+    overflow-x: auto !important;
+  }
+
+  .section {
+    padding: 52px 0 !important;
+  }
+
+  .section-header {
+    margin-bottom: 22px !important;
+  }
+
+  section.section .section-header h2,
+  section#gallery.photo-feature-v4 .section-header h2 {
+    font-size: clamp(26px, 7.4vw, 34px) !important;
+    line-height: 1.12 !important;
+  }
+
+  .section-header p {
+    font-size: 15px !important;
+  }
+
+  .value-card,
+  .product-card,
+  .cert-card,
+  .contact-card,
+  .compliance-panel {
+    padding: 16px !important;
+  }
+
+  .cert-card {
+    padding: 0 !important;
+  }
+
+  .cert-header,
+  .cert-body {
+    padding: 16px !important;
+  }
+
+  section#gallery.photo-feature-v4 .agrow-supporting-originals {
+    max-width: 100% !important;
+  }
+
+  .mobile-lang-dock {
+    right: 12px !important;
+    bottom: calc(12px + env(safe-area-inset-bottom)) !important;
+    padding: 3px !important;
+  }
+
+  .mobile-lang-dock button {
+    min-width: 42px !important;
+    min-height: 36px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .container,
+  .hero-grid,
+  section#gallery.photo-feature-v4 > .container,
+  section#gallery.photo-feature-v4 .agrow-original-visuals {
+    width: calc(100vw - 24px) !important;
+    max-width: calc(100vw - 24px) !important;
+  }
+
+  .brand-text {
+    max-width: 134px !important;
+  }
+
+  .hero h1 {
+    font-size: 38px !important;
+  }
+
+  .hero-tagline {
+    font-size: 24px !important;
+  }
+}
+
+/* Post-QA corrections: prevent mobile clipping and keep the fixed language control off hero copy. */
+@media (max-width: 780px) {
+  .hero {
+    padding: 76px 0 34px !important;
+  }
+
+  .hero-subtitle {
+    margin-bottom: 9px !important;
+    font-size: 10px !important;
+  }
+
+  .hero h1 {
+    margin-bottom: 7px !important;
+  }
+
+  .hero-tagline {
+    margin-bottom: 10px !important;
+  }
+
+  .hero-ctas {
+    margin-top: 16px !important;
+  }
+
+  .hero-proof-grid {
+    gap: 8px !important;
+    margin-top: 12px !important;
+  }
+
+  .hero-proof-item {
+    min-height: 0 !important;
+    padding: 10px 12px !important;
+  }
+
+  .hero-proof-item strong {
+    font-size: 13px !important;
+  }
+
+  .hero-proof-item span {
+    margin-top: 3px !important;
+    font-size: 12px !important;
+    line-height: 1.28 !important;
+  }
+
+  section#gallery.photo-feature-v4 .agrow-original-visuals,
+  section#gallery.photo-feature-v4 .agrow-operation-grid,
+  section#gallery.photo-feature-v4 .agrow-supporting-originals,
+  section#gallery.photo-feature-v4 .visual-card,
+  section#gallery.photo-feature-v4 .visual-card-large,
+  section#gallery.photo-feature-v4 .visual-card-side,
+  section#gallery.photo-feature-v4 .operation-card,
+  section#gallery.photo-feature-v4 .operation-card-wide,
+  section#gallery.photo-feature-v4 .supporting-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+/* Final nav correction: centered desktop bar and no mobile control overlaying text. */
+nav {
+  padding: 0 !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.fade-up,
+.fade-up.animate-ready,
+.fade-up.visible {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+@media (max-width: 780px) {
+  body {
+    padding-bottom: 0 !important;
+  }
+
+  .nav-brand {
+    max-width: calc(100% - 98px) !important;
+  }
+
+  .lang-toggle:not(.mobile-lang-dock) {
+    display: inline-flex !important;
+    flex: 0 0 auto !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+  }
+
+  .lang-toggle:not(.mobile-lang-dock) button {
+    min-width: 38px !important;
+    min-height: 32px !important;
+    padding: 0 10px !important;
+  }
+
+  .mobile-lang-dock {
+    display: none !important;
+  }
+}
+</style>
 </head>
 <body id="top">
 <div aria-hidden="true" class="aurora">
@@ -2271,7 +4142,7 @@ section#gallery.photo-feature-v4 .visual-card-side img {
 <li><a data-en="Fields" data-es="Campos" href="#gallery">Fields</a></li>
 <li><a data-en="Products" data-es="Productos" href="#products">Products</a></li>
 <li><a data-en="Values" data-es="Valores" href="#values">Values</a></li>
-<li><a data-en="Certifications" data-es="Certificaciones" href="#certifications">Certifications</a></li>
+<li><a data-en="Compliance" data-es="Cumplimiento" href="#certifications">Compliance</a></li>
 <li><a data-en="Cold Chain" data-es="Cadena de Frío" href="#cold-chain">Cold Chain</a></li>
 <li><a data-en="Contact" data-es="Contacto" href="#contact">Contact</a></li>
 </ul>
@@ -2280,7 +4151,7 @@ section#gallery.photo-feature-v4 .visual-card-side img {
 <button aria-pressed="false" data-lang="es" type="button">ES</button>
 </div>
 <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
-<span data-en="Get in Touch" data-es="Contáctanos">Get in Touch</span>
+<span data-en="Contact Sales" data-es="Ventas">Contact Sales</span>
 <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="14"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
 </button>
 </div>
@@ -2299,25 +4170,40 @@ section#gallery.photo-feature-v4 .visual-card-side img {
 <div class="hero-overlay"></div>
 <div class="hero-grid">
 <div class="hero-content">
-<p class="hero-subtitle" data-en="Premium Fresh Produce · Chihuahua, México" data-es="Producto Fresco Premium · Chihuahua, México">Premium Fresh Produce · Chihuahua, México</p>
+<p class="hero-subtitle" data-en="Buyer-Ready Produce · Chihuahua, México" data-es="Producto Listo Para Compradores · Chihuahua, México">Buyer-Ready Produce · Chihuahua, México</p>
 <h1 data-en="Agrow Farms" data-es="Agrow Farms">Agrow Farms</h1>
-<p class="hero-tagline" data-en="From Seed to Shelf — Grown with Purpose" data-es="De la Semilla al Anaquel — Cultivado con Propósito">From Seed to Shelf — Grown with Purpose</p>
-<p class="hero-desc" data-en="A vertically integrated greenhouse and open-field operation supplying premium fresh produce to US and Mexican markets under the highest food safety standards." data-es="Operación verticalmente integrada de invernadero y campo abierto que suministra producto fresco premium a los mercados de EE.UU. y México bajo los más altos estándares de inocuidad alimentaria.">
-        A vertically integrated greenhouse and open-field operation supplying premium fresh produce to US and Mexican markets under the highest food safety standards.
+<p class="hero-tagline" data-en="Fresh supply built for serious buyers." data-es="Suministro fresco para compradores serios.">Fresh supply built for serious buyers.</p>
+<p class="hero-desc" data-en="A vertically integrated greenhouse and open-field operation in Chihuahua, built for retail, wholesale, and cross-border programs that need consistent quality, traceable handling, and dependable shipping windows." data-es="Operación verticalmente integrada de invernadero y campo abierto en Chihuahua, creada para programas de retail, mayoreo y cruce fronterizo que necesitan calidad constante, manejo trazable y ventanas de embarque confiables.">
+        A vertically integrated greenhouse and open-field operation in Chihuahua, built for retail, wholesale, and cross-border programs that need consistent quality, traceable handling, and dependable shipping windows.
       </p>
 <div class="hero-ctas">
 <button class="btn-primary" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
-<span data-en="Our Products" data-es="Nuestros Productos">Our Products</span>
+<span data-en="View Products" data-es="Ver Productos">View Products</span>
 <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="14"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
 </button>
 <button class="btn-outline" onclick="document.getElementById('certifications').scrollIntoView({behavior:'smooth'})">
 <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"></path></svg>
-<span data-en="Certifications" data-es="Certificaciones">Certifications</span>
+<span data-en="Compliance" data-es="Cumplimiento">Compliance</span>
 </button>
+</div>
+<div class="hero-proof-grid" aria-label="Buyer trust signals" data-en-aria="Buyer trust signals" data-es-aria="Señales de confianza para compradores">
+<div class="hero-proof-item">
+<strong data-en="Food Safety First" data-es="Inocuidad Primero">Food Safety First</strong>
+<span data-en="Documented standards for buyer review." data-es="Estándares documentados para revisión del comprador.">Documented standards for buyer review.</span>
+</div>
+<div class="hero-proof-item">
+<strong data-en="Bilingual Sales" data-es="Ventas Bilingües">Bilingual Sales</strong>
+<span data-en="English and Spanish support from first call to shipment." data-es="Soporte en inglés y español desde la primera llamada hasta el embarque.">English and Spanish support from first call to shipment.</span>
+</div>
+<div class="hero-proof-item">
+<strong data-en="Cold-Chain Ready" data-es="Listo Para Cadena de Frío">Cold-Chain Ready</strong>
+<span data-en="Focused on freshness, handling discipline, and arrival quality." data-es="Enfocado en frescura, disciplina de manejo y calidad al llegar.">Focused on freshness, handling discipline, and arrival quality.</span>
+</div>
 </div>
 </div>
 <!-- Production & shipping map -->
 <div aria-label="Agrow Farms production sites in Chihuahua and shipping network across México and the United States" class="hero-map-wrap" data-en-aria="Agrow Farms production sites in Chihuahua and shipping network across México and the United States" data-es-aria="Sitios de producción de Agrow Farms en Chihuahua y red de distribución en México y Estados Unidos">
+<div class="hero-map-scroll" aria-label="Scrollable distribution map on mobile" data-en-aria="Scrollable distribution map on mobile" data-es-aria="Mapa de distribución desplazable en móvil">
 <svg viewbox="0 0 600 480" xmlns="http://www.w3.org/2000/svg">
 <defs>
 <pattern height="16" id="mapDots" patternunits="userSpaceOnUse" width="16" x="0" y="0">
@@ -2550,6 +4436,21 @@ section#gallery.photo-feature-v4 .visual-card-side img {
 </g>
 </svg>
 </div>
+<div class="map-intelligence" aria-label="Distribution intelligence" data-en-aria="Distribution intelligence" data-es-aria="Inteligencia de distribución">
+<div class="map-intelligence-card">
+<strong data-en="Chihuahua Production Base" data-es="Base Productiva en Chihuahua">Chihuahua Production Base</strong>
+<span data-en="Protected agriculture, open-field blocks, and packing activity coordinated from the same growing region." data-es="Agricultura protegida, bloques de campo abierto y actividad de empaque coordinados desde la misma región productiva.">Protected agriculture, open-field blocks, and packing activity coordinated from the same growing region.</span>
+</div>
+<div class="map-intelligence-card">
+<strong data-en="Border &amp; Market Access" data-es="Acceso Fronterizo y de Mercado">Border &amp; Market Access</strong>
+<span data-en="Northbound routes support buyer programs across the U.S. while maintaining Mexico market coverage." data-es="Rutas al norte apoyan programas de compradores en EE.UU. manteniendo cobertura en el mercado mexicano.">Northbound routes support buyer programs across the U.S. while maintaining Mexico market coverage.</span>
+</div>
+<div class="map-intelligence-card">
+<strong data-en="Planned Shipment Windows" data-es="Ventanas de Embarque Planeadas">Planned Shipment Windows</strong>
+<span data-en="Seasonal volume, cold-chain planning, and responsive bilingual communication built for dependable arrivals." data-es="Volumen estacional, planeación de cadena de frío y comunicación bilingüe para llegadas confiables.">Seasonal volume, cold-chain planning, and responsive bilingual communication built for dependable arrivals.</span>
+</div>
+</div>
+</div>
 </div><!-- /.hero-grid -->
 </section><section class="section section-alt photo-feature-v3 photo-feature-v4" id="gallery">
 <div class="container">
@@ -2561,16 +4462,12 @@ section#gallery.photo-feature-v4 .visual-card-side img {
 <div aria-label="Original Agrow Farms visuals preserved from the existing site" class="agrow-original-visuals fade-up">
 <article class="visual-card visual-card-large">
 <figure>
-<img alt="Aerial view of Agrow Farms greenhouse structures in Chihuahua" decoding="async" loading="eager" src="assets/photos/original-greenhouse-aerial.jpg"/>
-</figure>
-<div class="visual-copy">
-<span class="visual-kicker" data-en="Original Visual" data-es="Visual Original">Original Visual</span>
-<h3 data-en="Aerial Greenhouse Footprint" data-es="Huella Aérea de Invernaderos">Aerial Greenhouse Footprint</h3>
-<p data-en="This aerial view introduces the scale and organization of the protected-agriculture footprint, showing the controlled growing environment that anchors the operation." data-es="Esta vista aérea presenta la escala y organización de la huella de agricultura protegida, mostrando el ambiente de cultivo controlado que sostiene la operación.">This aerial view introduces the scale and organization of the protected-agriculture footprint, showing the controlled growing environment that anchors the operation.</p>
-<figure class="visual-added-photo">
 <img alt="Open-field melon rows under a clouded Chihuahua sky" decoding="async" loading="eager" src="assets/photos/uploaded-shade-house-extra.jpg"/>
 </figure>
-<p class="visual-added-caption" data-en="Open-field melon blocks are managed with clean row spacing, irrigation access, and wide harvest lanes so crews can move efficiently from field selection to packing. This view adds context to the protected shade-house production above, showing the broader Chihuahua growing environment that supports seasonal volume and dependable shipping windows." data-es="Los bloques de melón en campo abierto se manejan con espaciamiento limpio entre surcos, acceso a riego y amplios carriles de cosecha para que las cuadrillas se muevan eficientemente desde la selección en campo hasta el empaque. Esta vista añade contexto a la producción protegida en casa-sombra, mostrando el entorno agrícola más amplio de Chihuahua que respalda el volumen estacional y ventanas de embarque confiables.">Open-field melon blocks are managed with clean row spacing, irrigation access, and wide harvest lanes so crews can move efficiently from field selection to packing. This view adds context to the protected shade-house production above, showing the broader Chihuahua growing environment that supports seasonal volume and dependable shipping windows.</p>
+<div class="visual-copy">
+<span class="visual-kicker" data-en="Field Visual" data-es="Visual de Campo">Field Visual</span>
+<h3 data-en="Open-Field Melon Blocks" data-es="Bloques de Melón en Campo Abierto">Open-Field Melon Blocks</h3>
+<p data-en="Open-field melon blocks are managed with clean row spacing, irrigation access, and wide harvest lanes so crews can move efficiently from field selection to packing." data-es="Los bloques de melón en campo abierto se manejan con espaciamiento limpio entre surcos, acceso a riego y amplios carriles de cosecha para que las cuadrillas se muevan eficientemente desde la selección en campo hasta el empaque.">Open-field melon blocks are managed with clean row spacing, irrigation access, and wide harvest lanes so crews can move efficiently from field selection to packing.</p>
 </div>
 </article>
 <div class="visual-side-stack">
@@ -2647,8 +4544,8 @@ section#gallery.photo-feature-v4 .visual-card-side img {
 <div class="stat-label" data-en="Weeks of Supply" data-es="Semanas de Suministro">Weeks of Supply</div>
 </div>
 <div class="stat-item fade-up" style="transition-delay:0.16s">
-<div class="stat-value">2</div>
-<div class="stat-label" data-en="Food Safety Certifications" data-es="Certificaciones de Inocuidad">Food Safety Certifications</div>
+<div class="stat-value">6</div>
+<div class="stat-label" data-en="Buyer Trust Pillars" data-es="Pilares de Confianza">Buyer Trust Pillars</div>
 </div>
 <div class="stat-item fade-up" style="transition-delay:0.24s">
 <div class="stat-value" data-en="USA &amp; MX" data-es="EE.UU. &amp; MX">USA &amp; MX</div>
@@ -2656,6 +4553,7 @@ section#gallery.photo-feature-v4 .visual-card-side img {
 </div>
 </div>
 </div>
+</div><!-- /.stats-bar -->
 <!-- ── Values ───────────────────────────────────────────────────────────── -->
 <section class="section" id="values">
 <div class="container">
@@ -2880,10 +4778,24 @@ section#gallery.photo-feature-v4 .visual-card-side img {
 <section class="section section-alt" id="certifications">
 <div class="container">
 <div class="section-header fade-up">
-<h2 data-en="Food Safety &amp; Ethical Certifications" data-es="Certificaciones de Inocuidad y Ética">Food Safety &amp; Ethical Certifications</h2>
-<p data-en="We hold internationally recognized certifications that verify our commitment to food safety, worker welfare, and environmental responsibility." data-es="Contamos con certificaciones reconocidas internacionalmente que verifican nuestro compromiso con la inocuidad alimentaria, el bienestar de los trabajadores y la responsabilidad ambiental.">We hold internationally recognized certifications that verify our commitment to food safety, worker welfare, and environmental responsibility.</p>
+<h2 data-en="Compliance, Traceability &amp; Buyer Documentation" data-es="Cumplimiento, Trazabilidad y Documentación para Compradores">Compliance, Traceability &amp; Buyer Documentation</h2>
+<p data-en="A professional produce program is judged by more than the product in the box. Buyers need food safety discipline, traceable lots, ethical labor practices, cold-chain records, and documentation that can stand up to review." data-es="Un programa profesional de producto fresco se evalúa por más que el producto dentro de la caja. Los compradores necesitan disciplina de inocuidad, lotes trazables, prácticas laborales éticas, registros de cadena de frío y documentación que pueda sostener una revisión.">A professional produce program is judged by more than the product in the box. Buyers need food safety discipline, traceable lots, ethical labor practices, cold-chain records, and documentation that can stand up to review.</p>
 </div>
-<div class="certs-grid">
+<div class="compliance-intro fade-up">
+<div class="compliance-panel">
+<h3 data-en="Built for the standards serious buyers ask about." data-es="Construido alrededor de los estándares que piden los compradores serios.">Built for the standards serious buyers ask about.</h3>
+<p data-en="The reference set is modeled around the strongest produce companies: Primus GFS, SRRC / SENASICA, Mexico Suprema-style quality review, SMETA / Sedex, Fair Trade-style worker programs, traceability, sustainability, and organic or non-GMO documentation where the crop program requires it." data-es="El marco de referencia se basa en las empresas agrícolas más sólidas: Primus GFS, SRRC / SENASICA, revisión de calidad estilo México Suprema, SMETA / Sedex, programas laborales estilo Fair Trade, trazabilidad, sustentabilidad y documentación orgánica o libre de OGM cuando el programa de cultivo lo requiere.">The reference set is modeled around the strongest produce companies: Primus GFS, SRRC / SENASICA, Mexico Suprema-style quality review, SMETA / Sedex, Fair Trade-style worker programs, traceability, sustainability, and organic or non-GMO documentation where the crop program requires it.</p>
+</div>
+<div class="compliance-panel compliance-pillars" aria-label="Buyer trust pillars" data-en-aria="Buyer trust pillars" data-es-aria="Pilares de confianza para compradores">
+<span data-en="Quality" data-es="Calidad">Quality</span>
+<span data-en="Food Safety" data-es="Inocuidad">Food Safety</span>
+<span data-en="Traceability" data-es="Trazabilidad">Traceability</span>
+<span data-en="Social Responsibility" data-es="Responsabilidad Social">Social Responsibility</span>
+<span data-en="Sustainability" data-es="Sustentabilidad">Sustainability</span>
+<span data-en="Cold Chain" data-es="Cadena de Frío">Cold Chain</span>
+</div>
+</div>
+<div class="certs-grid compliance-grid">
 <div class="cert-card fade-up">
 <div class="cert-header cert-header-blue">
 <div class="cert-icon-wrap">
@@ -2891,12 +4803,13 @@ section#gallery.photo-feature-v4 .visual-card-side img {
 </div>
 <div>
 <div class="cert-title">Primus GFS</div>
-<div class="cert-score" data-en="Superior" data-es="Superior">Superior</div>
+<div class="cert-score" data-en="Food Safety Standard" data-es="Estándar de Inocuidad">Food Safety Standard</div>
 </div>
 </div>
 <div class="cert-body">
 <div class="cert-full" data-en="Primus Global Food Safety Standard" data-es="Primus Global Food Safety Standard">Primus Global Food Safety Standard</div>
-<p class="cert-desc" data-en="Annual third-party audit covering Good Agricultural Practices, food safety management systems, and worker welfare for fresh produce operations." data-es="Auditoría anual de tercera parte que cubre Buenas Prácticas Agrícolas, sistemas de gestión de inocuidad alimentaria y bienestar de los trabajadores para operaciones de producto fresco.">Annual third-party audit covering Good Agricultural Practices, food safety management systems, and worker welfare for fresh produce operations.</p>
+<p class="cert-desc" data-en="Reference standard for fresh produce food safety programs covering production, handling, processing, storage, and shipment controls." data-es="Estándar de referencia para programas de inocuidad en producto fresco que cubre producción, manejo, procesamiento, almacenamiento y controles de embarque.">Reference standard for fresh produce food safety programs covering production, handling, processing, storage, and shipment controls.</p>
+<span class="cert-status" data-en="Audit documents on request" data-es="Documentos de auditoría bajo solicitud">Audit documents on request</span>
 </div>
 </div>
 <div class="cert-card fade-up" style="transition-delay:0.08s">
@@ -2905,13 +4818,110 @@ section#gallery.photo-feature-v4 .visual-card-side img {
 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"></path></svg>
 </div>
 <div>
-<div class="cert-title">SMETA</div>
-<div class="cert-score" data-en="4-Pillar" data-es="4 Pilares">4-Pillar</div>
+<div class="cert-title">SRRC / GAP</div>
+<div class="cert-score" data-en="Production Controls" data-es="Controles de Producción">Production Controls</div>
 </div>
 </div>
 <div class="cert-body">
-<div class="cert-full" data-en="Sedex Members Ethical Trade Audit" data-es="Sedex Members Ethical Trade Audit">Sedex Members Ethical Trade Audit</div>
-<p class="cert-desc" data-en="4-pillar ethical audit covering Labour Standards, Health &amp; Safety, Environment, and Business Ethics — recognized globally by major retailers." data-es="Auditoría ética de 4 pilares que cubre Estándares Laborales, Salud y Seguridad, Medio Ambiente y Ética Empresarial — reconocida globalmente por los principales minoristas.">4-pillar ethical audit covering Labour Standards, Health &amp; Safety, Environment, and Business Ethics — recognized globally by major retailers.</p>
+<div class="cert-full" data-en="SENASICA SRRC and Good Agricultural Practices" data-es="SRRC SENASICA y Buenas Prácticas Agrícolas">SENASICA SRRC and Good Agricultural Practices</div>
+<p class="cert-desc" data-en="Field and packing discipline focused on reducing contamination risk through clean production, water, handling, and sanitation practices." data-es="Disciplina de campo y empaque enfocada en reducir riesgos de contaminación mediante buenas prácticas de producción, agua, manejo y sanitización.">Field and packing discipline focused on reducing contamination risk through clean production, water, handling, and sanitation practices.</p>
+<span class="cert-status" data-en="Crop-program documentation" data-es="Documentación por programa">Crop-program documentation</span>
+</div>
+</div>
+<div class="cert-card fade-up" style="transition-delay:0.16s">
+<div class="cert-header cert-header-green">
+<div class="cert-icon-wrap">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 2 4 5v7c0 5 3.4 9.4 8 10 4.6-.6 8-5 8-10V5l-8-3z"></path><path d="m9 12 2 2 4-4"></path></svg>
+</div>
+<div>
+<div class="cert-title">SMETA / Sedex</div>
+<div class="cert-score" data-en="Ethical Trade" data-es="Comercio Ético">Ethical Trade</div>
+</div>
+</div>
+<div class="cert-body">
+<div class="cert-full" data-en="Labor, Health &amp; Safety, Environment, Business Ethics" data-es="Trabajo, Salud y Seguridad, Medio Ambiente, Ética Empresarial">Labor, Health &amp; Safety, Environment, Business Ethics</div>
+<p class="cert-desc" data-en="Buyer-facing social compliance framework used to review labor standards, worker health and safety, environmental practices, and business ethics." data-es="Marco de cumplimiento social utilizado por compradores para revisar estándares laborales, salud y seguridad, prácticas ambientales y ética empresarial.">Buyer-facing social compliance framework used to review labor standards, worker health and safety, environmental practices, and business ethics.</p>
+<span class="cert-status" data-en="Social compliance path" data-es="Ruta de cumplimiento social">Social compliance path</span>
+</div>
+</div>
+<div class="cert-card fade-up" style="transition-delay:0.22s">
+<div class="cert-header cert-header-blue">
+<div class="cert-icon-wrap">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 3 4 7v6c0 4.5 3.2 7.5 8 8 4.8-.5 8-3.5 8-8V7l-8-4z"></path><path d="m9 12 2 2 4-5"></path></svg>
+</div>
+<div>
+<div class="cert-title">Mexico Suprema</div>
+<div class="cert-score" data-en="Quality Review" data-es="Revisión de Calidad">Quality Review</div>
+</div>
+</div>
+<div class="cert-body">
+<div class="cert-full" data-en="Quality, health, safety, and superior-product documentation path" data-es="Ruta documental de calidad, salud, inocuidad y producto superior">Quality, health, safety, and superior-product documentation path</div>
+<p class="cert-desc" data-en="A buyer-facing quality reference inspired by recognized Mexican produce programs that document sanitary controls, packing discipline, and product quality." data-es="Referencia de calidad para compradores inspirada en programas mexicanos reconocidos que documentan controles sanitarios, disciplina de empaque y calidad del producto.">A buyer-facing quality reference inspired by recognized Mexican produce programs that document sanitary controls, packing discipline, and product quality.</p>
+<span class="cert-status" data-en="Verification path" data-es="Ruta de verificación">Verification path</span>
+</div>
+</div>
+<div class="cert-card fade-up" style="transition-delay:0.28s">
+<div class="cert-header cert-header-green">
+<div class="cert-icon-wrap">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M16 11c1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3 1.3 3 3 3z"></path><path d="M8 11c1.7 0 3-1.3 3-3S9.7 5 8 5 5 6.3 5 8s1.3 3 3 3z"></path><path d="M2 20c.7-3 2.7-5 6-5s5.3 2 6 5"></path><path d="M10 20c.7-3 2.7-5 6-5 2.2 0 3.8.9 4.8 2.5"></path></svg>
+</div>
+<div>
+<div class="cert-title">Fair Trade</div>
+<div class="cert-score" data-en="Worker Programs" data-es="Programas Laborales">Worker Programs</div>
+</div>
+</div>
+<div class="cert-body">
+<div class="cert-full" data-en="Human capital, community, health, safety, and social benefit focus" data-es="Enfoque en capital humano, comunidad, salud, seguridad y beneficio social">Human capital, community, health, safety, and social benefit focus</div>
+<p class="cert-desc" data-en="Social-responsibility reference for programs where buyers ask for worker welfare, community benefit, and responsible sourcing documentation." data-es="Referencia de responsabilidad social para programas donde los compradores piden bienestar laboral, beneficio comunitario y documentación de abastecimiento responsable.">Social-responsibility reference for programs where buyers ask for worker welfare, community benefit, and responsible sourcing documentation.</p>
+<span class="cert-status" data-en="Buyer-program ready" data-es="Listo para programas de comprador">Buyer-program ready</span>
+</div>
+</div>
+<div class="cert-card fade-up" style="transition-delay:0.34s">
+<div class="cert-header cert-header-blue">
+<div class="cert-icon-wrap">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M3 7h18"></path><path d="M6 7v10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7"></path><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><path d="M10 12h4"></path></svg>
+</div>
+<div>
+<div class="cert-title">Traceability</div>
+<div class="cert-score" data-en="Lot-Level Control" data-es="Control por Lote">Lot-Level Control</div>
+</div>
+</div>
+<div class="cert-body">
+<div class="cert-full" data-en="Farm-to-buyer records and shipment visibility" data-es="Registros del campo al comprador y visibilidad de embarque">Farm-to-buyer records and shipment visibility</div>
+<p class="cert-desc" data-en="Lot identity, harvest date, production site, packing flow, and shipment records help buyers understand where product came from and how it moved." data-es="Identidad de lote, fecha de cosecha, sitio de producción, flujo de empaque y registros de embarque ayudan al comprador a entender de dónde vino el producto y cómo se movió.">Lot identity, harvest date, production site, packing flow, and shipment records help buyers understand where product came from and how it moved.</p>
+<span class="cert-status" data-en="Lot records available" data-es="Registros de lote disponibles">Lot records available</span>
+</div>
+</div>
+<div class="cert-card fade-up" style="transition-delay:0.32s">
+<div class="cert-header cert-header-green">
+<div class="cert-icon-wrap">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M11 21c-2-7 1-12 8-13-2 6-3 12-8 13z"></path><path d="M11 21c-1-3-3-6-6-7"></path></svg>
+</div>
+<div>
+<div class="cert-title">Organic / Non-GMO</div>
+<div class="cert-score" data-en="When Applicable" data-es="Cuando Aplique">When Applicable</div>
+</div>
+</div>
+<div class="cert-body">
+<div class="cert-full" data-en="Program-specific transparency for crop requirements" data-es="Transparencia específica por programa de cultivo">Program-specific transparency for crop requirements</div>
+<p class="cert-desc" data-en="For crop programs that require organic, non-GMO, or special buyer declarations, documentation should be handled by product line and shipment window." data-es="Para programas que requieren orgánico, libre de OGM o declaraciones especiales del comprador, la documentación debe manejarse por línea de producto y ventana de embarque.">For crop programs that require organic, non-GMO, or special buyer declarations, documentation should be handled by product line and shipment window.</p>
+<span class="cert-status" data-en="By crop and buyer need" data-es="Por cultivo y necesidad del comprador">By crop and buyer need</span>
+</div>
+</div>
+<div class="cert-card fade-up" style="transition-delay:0.40s">
+<div class="cert-header cert-header-blue">
+<div class="cert-icon-wrap">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"></path><path d="M18 9h3"></path><path d="M18 13h3"></path></svg>
+</div>
+<div>
+<div class="cert-title">Cold-Chain Records</div>
+<div class="cert-score" data-en="Shipment Discipline" data-es="Disciplina de Embarque">Shipment Discipline</div>
+</div>
+</div>
+<div class="cert-body">
+<div class="cert-full" data-en="Temperature, packing, dispatch, and delivery control" data-es="Control de temperatura, empaque, despacho y entrega">Temperature, packing, dispatch, and delivery control</div>
+<p class="cert-desc" data-en="Pre-cooling, packing, refrigerated storage, and transport checkpoints support shelf life, buyer confidence, and fewer surprises on arrival." data-es="Pre-enfriamiento, empaque, almacenamiento refrigerado y puntos de control de transporte respaldan vida útil, confianza del comprador y menos sorpresas al llegar.">Pre-cooling, packing, refrigerated storage, and transport checkpoints support shelf life, buyer confidence, and fewer surprises on arrival.</p>
+<span class="cert-status" data-en="Shipment records by load" data-es="Registros por carga">Shipment records by load</span>
 </div>
 </div>
 </div>
@@ -3018,6 +5028,16 @@ section#gallery.photo-feature-v4 .visual-card-side img {
 <div class="contact-label" data-en="Email" data-es="Correo">Email</div>
 <div class="contact-value">sales@agrowfarms.mx</div>
 </a>
+<div class="contact-card social-card">
+<div class="contact-icon">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>
+</div>
+<div class="contact-label" data-en="Social Media" data-es="Redes Sociales">Social Media</div>
+<div class="social-links">
+<a aria-label="Instagram profile link pending" class="social-chip" data-en="Instagram" data-es="Instagram" href="#" onclick="return false;">Instagram</a>
+<a aria-label="LinkedIn profile link pending" class="social-chip" data-en="LinkedIn" data-es="LinkedIn" href="#" onclick="return false;">LinkedIn</a>
+</div>
+</div>
 </div>
 <p class="footer-text" data-en="© 2026 Agrow Farms. All rights reserved." data-es="© 2026 Agrow Farms. Todos los derechos reservados.">© 2026 Agrow Farms. All rights reserved.</p>
 <p class="footer-text" data-en="Powered by Nousetis · Owned by The Wiebe Group Inc. · HQ Texas" data-es="Impulsado por Nousetis · Propiedad de The Wiebe Group Inc. · HQ Texas" style="margin-top:6px;">Powered by Nousetis · Owned by The Wiebe Group Inc. · HQ Texas</p>
@@ -3042,6 +5062,10 @@ section#gallery.photo-feature-v4 .visual-card-side img {
 <button class="phone-modal-cancel" data-en="Cancel" data-es="Cancelar" id="phoneModalCancel" type="button">Cancel</button>
 </div>
 </div>
+<div aria-label="Language selector" class="lang-toggle mobile-lang-dock" role="group">
+<button aria-pressed="true" class="active" data-lang="en" type="button">EN</button>
+<button aria-pressed="false" data-lang="es" type="button">ES</button>
+</div>
 <!-- ── Scripts ────────────────────────────────────────────────────────────── -->
 <script>
     // Scroll animations
@@ -3060,20 +5084,28 @@ section#gallery.photo-feature-v4 .visual-card-side img {
     // Active navigation state
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-links a');
-    window.addEventListener('scroll', () => {
-      let current = '';
-      sections.forEach(section => {
-        const top = section.offsetTop - 80;
-        if (window.scrollY >= top) current = section.getAttribute('id') || '';
-      });
-      navLinks.forEach(link => {
-        const isActive = link.getAttribute('href') === '#' + current;
-        link.style.color = isActive ? '#111827' : '';
-        link.style.fontWeight = isActive ? '600' : '';
-      });
-    }, { passive: true });
+	    window.addEventListener('scroll', () => {
+	      let current = '';
+	      sections.forEach(section => {
+	        const top = section.offsetTop - 80;
+	        if (window.scrollY >= top) current = section.getAttribute('id') || '';
+	      });
+	      navLinks.forEach(link => {
+	        const isActive = link.getAttribute('href') === '#' + current;
+	        link.style.color = isActive ? '#111827' : '';
+	        link.style.fontWeight = isActive ? '600' : '';
+	      });
+	    }, { passive: true });
 
-    // Language switcher
+	    // Logo always returns visitors to the top.
+	    document.querySelectorAll('.nav-brand').forEach(link => {
+	      link.addEventListener('click', event => {
+	        event.preventDefault();
+	        window.scrollTo({ top: 0, behavior: 'smooth' });
+	      });
+	    });
+
+	    // Language switcher
     (function () {
       const LANG_KEY = 'agrow_lang';
 
